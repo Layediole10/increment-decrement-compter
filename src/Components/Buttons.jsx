@@ -1,6 +1,6 @@
 import {React, useState} from 'react';
 
-
+import '../App.css';
 
 const Buttons = () => {
 
@@ -19,19 +19,24 @@ const Buttons = () => {
         setNumber(number-1);
 
         }else {
-            alert("La limite c'est zero")
+
+            
+            alert("Sorry! The decrement limit is zero!")
         }
     }
 
     return (
-        <div>
+        <div className='box-wrapper'>
              <form>
-                <input type="text" 
+                <input type="text"
+                 
                 value={number}
                 />
             </form>
-            <button onClick={() => increment()}>Increment</button>
-            <button onClick={() => decrement()}>Decrement</button>
+            <div className='boutons'>
+                <button onClick={() => increment()}>Increment</button>
+                <button  onClick={() => decrement()}>Decrement</button>
+            </div>
     
         </div>
     );
