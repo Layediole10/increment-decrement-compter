@@ -3,6 +3,7 @@
 
 
 import Buttons from './Components/Buttons';
+import Apireact from './Components/Apireact';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       
       <Buttons />
+      <Apireact />
     
     </div>
   );

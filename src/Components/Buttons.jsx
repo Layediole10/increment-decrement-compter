@@ -6,36 +6,35 @@ const Buttons = () => {
 
    
     const [number, setNumber] = useState(0);
+    const [disabled, setDisabled] = useState(false);
+    
 
     const increment = () => {
 
         setNumber(number+1);
+
     }
 
     const decrement = () => {
 
-        if(number > 0){
+        setNumber(number - 1);
 
-        setNumber(number-1);
-
-        }else {
-
-            
-            alert("Sorry! The decrement limit is zero!")
-        }
+            // alert("Sorry! The decrement limit is zero!")
+        
     }
+
+    
+   
+   
 
     return (
         <div className='box-wrapper'>
-             <form>
-                <input type="text"
-                 
-                value={number}
-                />
-            </form>
+             
+               <span className = {(number > 12) ? "bg-box2":"bg-box1"}>{number}</span>
+            
             <div className='boutons'>
-                <button onClick={() => increment()}>Increment</button>
-                <button  onClick={() => decrement()}>Decrement</button>
+                <button onClick={increment}>+</button>
+                <button  onClick={ decrement} >-</button>
             </div>
     
         </div>
